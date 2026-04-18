@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "dgSpecHash": "ByGIdAnECNg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hanal\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\libvlcsharp\\3.9.6\\libvlcsharp.3.9.6.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\libvlcsharp.wpf\\3.9.6\\libvlcsharp.wpf.3.9.6.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.2\\microsoft.extensions.dependencyinjection.10.0.2.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4\\4.13.0.20260308\\opencvsharp4.4.13.0.20260308.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.runtime.win\\4.13.0.20260302\\opencvsharp4.runtime.win.4.13.0.20260302.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.wpfextensions\\4.13.0.20260308\\opencvsharp4.wpfextensions.4.13.0.20260308.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\10.0.3\\runtime.android-arm.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.android-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\10.0.3\\runtime.android-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.android-x86.runtime.native.system.io.ports\\10.0.3\\runtime.android-x86.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\10.0.3\\runtime.linux-arm.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-bionic-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-bionic-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-bionic-x64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-bionic-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-musl-arm.runtime.native.system.io.ports\\10.0.3\\runtime.linux-musl-arm.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-musl-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-musl-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-musl-x64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-musl-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\10.0.3\\runtime.linux-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.maccatalyst-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.maccatalyst-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.maccatalyst-x64.runtime.native.system.io.ports\\10.0.3\\runtime.maccatalyst-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.native.system.io.ports\\10.0.3\\runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.osx-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\10.0.3\\runtime.osx-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.io.ports\\10.0.3\\system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\videolan.libvlc.windows\\3.0.23\\videolan.libvlc.windows.3.0.23.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Net.Sockets ayıklanmayacak. Bu paketi bağımlılıklarınızdan kaldırmayı düşünün, çünkü muhtemelen gereksizdir.",
+      "projectPath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+      "libraryId": "System.Net.Sockets",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
+}
