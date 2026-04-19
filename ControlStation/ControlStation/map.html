@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savaşan İHA Taktik Haritası</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #16161A;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        /* Modern Karanlık Tema Popup Tasarımı */
+        .leaflet-tooltip {
+            background: rgba(22, 22, 26, 0.9);
+            color: #00E5FF;
+            border: 1px solid #27272A;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+        }
+        /* Uçak İkonları (CSS ile üçgen çizimi ve parlama efekti) */
+        .own-uav {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #00E5FF;
+            filter: drop-shadow(0 0 8px #00E5FF);
+        }
+
+        .enemy-uav {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #FF4444;
+            filter: drop-shadow(0 0 8px #FF4444);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>// 1. Haritayı Başlat (Karanlık Tema - CartoDB Dark Matter)
+        var map = L.map('map', { zoomControl: false }).setView([40.74, 29.97], 15); // Örnek Koordinat (Kocaeli/Bilişim Vadisi vs)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19, attribution: '© OpenStreetMap © CartoDB'
+        }).addTo(map);
+
+        // 2. Değişkenler
+        var ownMarker = null;
+        var ownRoute = L.polyline([], { color: '#00E5FF', weight: 3, opacity: 0.7, dashArray: '5, 10' }).addTo(map);
+        var enemies = {}; // Düşman uçaklarını tutacağımız sözlük
+
+        // HTML/CSS İkon Tanımlamaları
+        var ownIcon = L.divIcon({ className: 'own-uav', iconSize: [20, 20], iconAnchor: [10, 10] });
+        var enemyIcon = L.divIcon({ className: 'enemy-uav', iconSize: [20, 20], iconAnchor: [10, 10] });
+
+        // ==========================================
+        // C# TARAFINDAN ÇAĞRILACAK JAVASCRIPT FONKSİYONLARI
+        // ==========================================
+
+        // Kendi Uçağımızı Güncelleme
+        function updateOwnUAV(lat, lng, heading, alt, speed) {
+            var latlng = [lat, lng];
+
+            // Rotaya yeni noktayı ekle
+            ownRoute.addLatLng(latlng);
+
+            var infoText = `<b>[BİZİM İHA]</b><br>İrtifa: ${alt}m<br>Hız: ${speed}m/s<br>Yön: ${heading}°`;
+
+            if (!ownMarker) {
+                // Uçak haritada yoksa oluştur
+                ownMarker = L.marker(latlng, { icon: ownIcon, rotationAngle: heading }).addTo(map);
+                ownMarker.bindTooltip(infoText, { direction: 'top', offset: [0, -10] });
+                map.panTo(latlng); // Kamera uçağı takip etsin
+            } else {
+                // Uçak varsa yerini, açısını ve bilgisini güncelle
+                ownMarker.setLatLng(latlng);
+                ownMarker.setTooltipContent(infoText);
+                // HTML elementini bulup açısını (Heading) çeviriyoruz
+                if(ownMarker._icon) ownMarker._icon.style.transform += ` rotate(${heading}deg)`;
+            }
+        }
+
+        // Düşman Uçağını Güncelleme (Birden fazla düşman olabilir)
+        function updateEnemyUAV(id, lat, lng, heading, alt, speed) {
+            var latlng = [lat, lng];
+            var infoText = `<b>[HEDEF-${id}]</b><br>İrtifa: ${alt}m<br>Hız: ${speed}m/s`;
+
+            if (!enemies[id]) {
+                enemies[id] = L.marker(latlng, { icon: enemyIcon }).addTo(map);
+                enemies[id].bindTooltip(infoText, { direction: 'top', offset: [0, -10] });
+            } else {
+                enemies[id].setLatLng(latlng);
+                enemies[id].setTooltipContent(infoText);
+                if(enemies[id]._icon) enemies[id]._icon.style.transform += ` rotate(${heading}deg)`;
+            }
+        }</script>
+</body>
+</html>

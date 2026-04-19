@@ -9,12 +9,17 @@
       "ControlStation/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.4.0",
+          "HUD": "1.0.0",
           "LibVLCSharp.WPF": "3.9.6",
           "Microsoft.Extensions.DependencyInjection": "10.0.2",
+          "Microsoft.Web.WebView2": "1.0.3912.50",
           "OpenCvSharp4": "4.13.0.20260308",
           "OpenCvSharp4.WpfExtensions": "4.13.0.20260308",
           "OpenCvSharp4.runtime.win": "4.13.0.20260302",
-          "System.IO.Ports": "10.0.3"
+          "System.IO.Ports": "10.0.3",
+          "Microsoft.Web.WebView2.Core": "1.0.3912.50",
+          "Microsoft.Web.WebView2.WinForms": "1.0.3912.50",
+          "Microsoft.Web.WebView2.Wpf": "1.0.3912.50"
         },
         "runtime": {
           "ControlStation.dll": {}
@@ -63,6 +68,25 @@
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.225.61305"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.3912.50": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.3912.50"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.3912.50"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.3912.50"
           }
         }
       },
@@ -287,6 +311,38 @@
             "fileVersion": "10.0.326.7603"
           }
         }
+      },
+      "HUD/1.0.0": {
+        "runtime": {
+          "HUD.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.Core/1.0.3912.50": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.3912.50",
+            "fileVersion": "1.0.3912.50"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.WinForms/1.0.3912.50": {
+        "runtime": {
+          "Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.3912.50",
+            "fileVersion": "1.0.3912.50"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.Wpf/1.0.3912.50": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.3912.50",
+            "fileVersion": "1.0.3912.50"
+          }
+        }
       }
     }
   },
@@ -330,6 +386,13 @@
       "sha512": "sha512-zOIurr59+kUf9vNcsUkCvKWZv+fPosUZXURZesYkJCvl0EzTc9F7maAO4Cd2WEV7ZJJ0AZrFQvuH6Npph9wdBw==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.2",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.3912.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mEIKZDSmb6CxGWKoxaxTSJ0yi0DD2zp29TA7kJY2GdanuH3c5aYruwfqsm3OsYn/h2hUhybQZvfbxyZe4O+X4Q==",
+      "path": "microsoft.web.webview2/1.0.3912.50",
+      "hashPath": "microsoft.web.webview2.1.0.3912.50.nupkg.sha512"
     },
     "OpenCvSharp4/4.13.0.20260308": {
       "type": "package",
@@ -477,6 +540,26 @@
       "sha512": "sha512-Zs04mZ/dQtaFQ+hpQNDtijBs+6aM9j2fQPp8zNZTfh8DboVNNv7Sw6gH00hT+PVcAhEozlfT+n59Svm6Ug8ROA==",
       "path": "system.io.ports/10.0.3",
       "hashPath": "system.io.ports.10.0.3.nupkg.sha512"
+    },
+    "HUD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Core/1.0.3912.50": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.WinForms/1.0.3912.50": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Wpf/1.0.3912.50": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -17,6 +17,8 @@ namespace ControlStation.ViewModels
     {
         private readonly RfService _rfService;
 
+        private readonly ConnectionsService _tcpService;
+
         private LibVLC _libVLC;
 
         [ObservableProperty]
@@ -43,9 +45,10 @@ namespace ControlStation.ViewModels
             "RTL"
         };
 
-        public DashboardViewModel(RfService rfService)
+        public DashboardViewModel(RfService rfService, ConnectionsService tcpService)
         {
             _rfService = rfService;
+            _tcpService = tcpService;
 
             
             TelemetryCards = new ObservableCollection<TelemetryCard>
@@ -115,6 +118,13 @@ namespace ControlStation.ViewModels
         }
 
         [RelayCommand]
+        private async Task ChangeModeTCP(string mode)
+        {
+            await _tcpService.SendCommandAsync(mode);
+            MessageBox.Show($"Uçağa şu komut gönderildi: {mode}");
+        }
+
+        [RelayCommand]
         private void ToggleVideo()
         {
             Debug.WriteLine("Buton calisti");
@@ -139,7 +149,5 @@ namespace ControlStation.ViewModels
                 IsVideoRunning = true;
             }
         }
-
-
     }
 }

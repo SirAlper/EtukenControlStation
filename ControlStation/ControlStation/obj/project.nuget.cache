@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ByGIdAnECNg=",
+  "dgSpecHash": "YWef/A0ztmc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+  "projectFilePath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hanal\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\libvlcsharp\\3.9.6\\libvlcsharp.3.9.6.nupkg.sha512",
@@ -11,6 +11,7 @@
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.web.webview2\\1.0.3912.50\\microsoft.web.webview2.1.0.3912.50.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4\\4.13.0.20260308\\opencvsharp4.4.13.0.20260308.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.runtime.win\\4.13.0.20260302\\opencvsharp4.runtime.win.4.13.0.20260302.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.wpfextensions\\4.13.0.20260308\\opencvsharp4.wpfextensions.4.13.0.20260308.nupkg.sha512",
@@ -40,9 +41,9 @@
       "code": "NU1510",
       "level": "Warning",
       "message": "PackageReference System.Net.Sockets ayıklanmayacak. Bu paketi bağımlılıklarınızdan kaldırmayı düşünün, çünkü muhtemelen gereksizdir.",
-      "projectPath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+      "projectPath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\hanal\\source\\repos\\ControlStation\\ControlStation\\ControlStation.csproj",
+      "filePath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
       "libraryId": "System.Net.Sockets",
       "targetGraphs": [
         "net10.0-windows7.0"

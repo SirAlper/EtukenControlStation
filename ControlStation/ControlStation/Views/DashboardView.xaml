@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ControlStation.Views"
              xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
-            
+             xmlns:hud="clr-namespace:HUD;assembly=HUD"
+             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280"
              >
@@ -24,8 +25,11 @@
 
             <Border Grid.Column="0" Margin="10,10,5,10" Background="#16161A" CornerRadius="12" BorderBrush="#27272A" BorderThickness="1" ClipToBounds="True">
                 <Grid>
-                    <TextBlock Text="🗺 HARİTA ALANI" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#444444" FontSize="20" FontWeight="Black"/>
-                    <TextBlock Text="OpenStreetMap / Bing Maps" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Foreground="#333333"/>
+                    <wv2:WebView2 x:Name="MapWebView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+                    <Border Background="#AA000000" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15" Padding="8,4" CornerRadius="4">
+                        <TextBlock Text="TAKTİK HARİTA [SITL]" Foreground="#00E5FF" FontSize="11" FontWeight="Bold"/>
+                    </Border>
                 </Grid>
             </Border>
 
@@ -91,19 +95,8 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-
-                    <Grid Grid.Column="0" Width="140" Height="140" Margin="20">
-                        <Ellipse Stroke="#333" StrokeThickness="4">
-                            <Ellipse.Fill>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#006699" Offset="0.5"/>
-                                    <GradientStop Color="#4A2E15" Offset="0.5"/>
-                                </LinearGradientBrush>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <Path Stroke="#00E5FF" StrokeThickness="2" Data="M 30,70 L 60,70 M 80,70 L 110,70 M 70,60 L 70,80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="HUD" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#888" FontSize="10" FontWeight="Bold" Margin="0,40,0,0"/>
-                    </Grid>
+                    <hud:HUDControl YawAngle="{Binding ElementName=Slider_Yaw,Path=Value,Mode=TwoWay}" PitchAngle="{Binding ElementName=Slider_Pitch,Path=Value}" RollAngle="{Binding ElementName=Slider_Roll,Path=Value}" MaxRollAngle="80"/>
+                    
 
                     <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="10">
                         <ItemsControl ItemsSource="{Binding TelemetryCards}">
@@ -170,24 +163,24 @@
 
                         <TabItem Header="STATE">
                             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
-                                <Button Content="INTERCEPT" Width="90" Height="32" Margin="5" Background="#4A1515" Foreground="#FF5555" BorderBrush="#661111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="state intercept" Cursor="Hand"/>
+                                <Button Content="INTERCEPT" Width="90" Height="32" Margin="5" Background="#4A1515" Foreground="#FF5555" BorderBrush="#661111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="state intercept" Cursor="Hand"/>
 
-                                <Button Content="CRUISE" Width="90" Height="32" Margin="5" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="state cruise" Cursor="Hand"/>
+                                <Button Content="CRUISE" Width="90" Height="32" Margin="5" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="state cruise" Cursor="Hand"/>
                             </WrapPanel>
                         </TabItem>
 
                         <TabItem Header="TARGET">
                             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
-                                <Button Content="LOCK ON" Width="90" Height="32" Margin="5" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="target lock" Cursor="Hand"/>
-                                <Button Content="RELEASE" Width="90" Height="32" Margin="5" Background="#151A4A" Foreground="#5588FF" BorderBrush="#112266" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="target release" Cursor="Hand"/>
+                                <Button Content="LOCK ON" Width="90" Height="32" Margin="5" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target lock" Cursor="Hand"/>
+                                <Button Content="RELEASE" Width="90" Height="32" Margin="5" Background="#151A4A" Foreground="#5588FF" BorderBrush="#112266" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target release" Cursor="Hand"/>
                             </WrapPanel>
                         </TabItem>
 
                         <TabItem Header="SELECT">
                             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
-                                <Button Content="ARM" Width="70" Height="32" Margin="3" Background="#2A1111" Foreground="#FF4444" BorderBrush="#441111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="arm" Cursor="Hand"/>
-                                <Button Content="DISARM" Width="70" Height="32" Margin="3" Background="#112211" Foreground="#44FF44" BorderBrush="#114411" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="disarm" Cursor="Hand"/>
-                                <Button Content="RTL" Width="70" Height="32" Margin="3" Background="#112233" Foreground="#44AAFF" BorderBrush="#113355" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeCommand}" CommandParameter="rtl" Cursor="Hand"/>
+                                <Button Content="1" Width="70" Height="32" Margin="3" Background="#2A1111" Foreground="#FF4444" BorderBrush="#441111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="select 1" Cursor="Hand"/>
+                                <Button Content="2" Width="70" Height="32" Margin="3" Background="#112211" Foreground="#44FF44" BorderBrush="#114411" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="select 2" Cursor="Hand"/>
+                                <Button Content="3" Width="70" Height="32" Margin="3" Background="#112233" Foreground="#44AAFF" BorderBrush="#113355" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="select 3" Cursor="Hand"/>
                             </WrapPanel>
                         </TabItem>
 
