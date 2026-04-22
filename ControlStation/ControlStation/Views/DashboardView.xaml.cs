@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlStation.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,6 +23,25 @@ namespace ControlStation.Views
         {
             InitializeComponent();
             InitializeMapAsync();
+
+            this.DataContextChanged += (s, e) =>
+            {
+                if (DataContext is DashboardViewModel vm)
+                {
+                    // ViewModel'deki elçiye görevini veriyoruz: 
+                    // "ViewModel haber verince, haritadaki UpdateMapPosition fonksiyonunu çalıştır"
+                    vm.RequestMapUpdate = (data) =>
+                    {
+                        UpdateMapPosition(
+                            data.IhaEnlem,
+                            data.IhaBoylam,
+                            data.IhaYonelme,
+                            data.IhaIrtifa,
+                            data.IhaHiz
+                        );
+                    };
+                }
+            };
         }
         private async void InitializeMapAsync()
         {
@@ -32,37 +52,20 @@ namespace ControlStation.Views
             string htmlPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.html"); MapWebView.CoreWebView2.Navigate(htmlPath);
         }
 
+        public async void UpdateMapPosition(double lat, double lng, double yaw, double alt, double speed)
+        {
+            if (MapWebView != null && MapWebView.CoreWebView2 != null)
+            {
+                // Sayıları JS'in anlayacağı formatta (noktalı) yollamak için InvariantCulture kullanıyoruz!
+                string script = string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                    "updateUAV({0}, {1}, {2}, {3}, {4})", lat, lng, yaw, alt, speed);
+
+                await MapWebView.CoreWebView2.ExecuteScriptAsync(script);
+            }
+        }
+
         // ViewModel veya Telemetri Servisi üzerinden bu metodu çağırabilirsin
-        public async void SendOwnTelemetryToMap(double lat, double lng, double yaw, double alt, double speed)
-        {
-            if (MapWebView != null && MapWebView.CoreWebView2 != null)
-            {
-                // JavaScript'teki 'updateOwnUAV' fonksiyonunu C# içinden tetikliyoruz!
-                string script = $"updateOwnUAV({lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{yaw.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{alt.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{speed.ToString(System.Globalization.CultureInfo.InvariantCulture)});";
-
-                await MapWebView.CoreWebView2.ExecuteScriptAsync(script);
-            }
-        }
-
-        public async void SendEnemyTelemetryToMap(int enemyId, double lat, double lng, double yaw, double alt, double speed)
-        {
-            if (MapWebView != null && MapWebView.CoreWebView2 != null)
-            {
-                // Düşman uçağının verilerini haritaya gönderiyoruz
-                string script = $"updateEnemyUAV({enemyId}, " +
-                                $"{lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{yaw.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{alt.ToString(System.Globalization.CultureInfo.InvariantCulture)}, " +
-                                $"{speed.ToString(System.Globalization.CultureInfo.InvariantCulture)});";
-
-                await MapWebView.CoreWebView2.ExecuteScriptAsync(script);
-            }
-        }
+        
     }
 }
 

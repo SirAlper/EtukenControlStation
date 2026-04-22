@@ -95,7 +95,7 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <hud:HUDControl YawAngle="{Binding ElementName=Slider_Yaw,Path=Value,Mode=TwoWay}" PitchAngle="{Binding ElementName=Slider_Pitch,Path=Value}" RollAngle="{Binding ElementName=Slider_Roll,Path=Value}" MaxRollAngle="80"/>
+                    <hud:HUDControl YawAngle="{Binding YawAngle}" PitchAngle="{Binding PitchAngle}" RollAngle="{Binding RollAngle}" MaxRollAngle="80"/>
                     
 
                     <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="10">
@@ -164,16 +164,73 @@
                         <TabItem Header="STATE">
                             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
                                 <Button Content="INTERCEPT" Width="90" Height="32" Margin="5" Background="#4A1515" Foreground="#FF5555" BorderBrush="#661111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="state intercept" Cursor="Hand"/>
-
                                 <Button Content="CRUISE" Width="90" Height="32" Margin="5" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="state cruise" Cursor="Hand"/>
+                                <Button Content="KAMIKAZE" Width="90" Height="32" Margin="5" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="state kamikaze" Cursor="Hand"/>
                             </WrapPanel>
                         </TabItem>
 
                         <TabItem Header="TARGET">
                             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
-                                <Button Content="LOCK ON" Width="90" Height="32" Margin="5" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target lock" Cursor="Hand"/>
-                                <Button Content="RELEASE" Width="90" Height="32" Margin="5" Background="#151A4A" Foreground="#5588FF" BorderBrush="#112266" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target release" Cursor="Hand"/>
+                                <Button Content="1" Width="70" Height="32" Margin="3" Background="#2A1111" Foreground="#FF4444" BorderBrush="#441111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target 1" Cursor="Hand"/>
+                                <Button Content="2" Width="70" Height="32" Margin="3" Background="#112211" Foreground="#44FF44" BorderBrush="#114411" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target 2" Cursor="Hand"/>
+                                <Button Content="3" Width="70" Height="32" Margin="3" Background="#112233" Foreground="#44AAFF" BorderBrush="#113355" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="target 3" Cursor="Hand"/>
+                                <Button Content="LISTADD" Width="70" Height="32" Margin="3" Background="#112233" Foreground="#44AAFF" BorderBrush="#113355" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ListAddCommand}"  Cursor="Hand"/>
                             </WrapPanel>
+                        </TabItem>
+
+                        <TabItem Header="AUTO">
+                            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,0">
+                                <Button Content="ON" Width="90" Height="32" Margin="5" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="auto on" Cursor="Hand"/>
+                                <Button Content="OFF" Width="90" Height="32" Margin="5" Background="#151A4A" Foreground="#5588FF" BorderBrush="#112266" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="auto off" Cursor="Hand"/>
+                            </WrapPanel>
+                        </TabItem>
+
+                        <TabItem Header="TO/L">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+
+                                <UniformGrid Columns="3" Margin="0,0,0,8">
+                                    <StackPanel Margin="3">
+                                        <TextBlock Text="ALTITUDE" Foreground="#888" FontSize="9" HorizontalAlignment="Center"/>
+                                        <TextBox Text="{Binding Altitude, UpdateSourceTrigger=PropertyChanged}" Background="#0C0C0F" Foreground="#00E5FF" BorderBrush="#27272A" BorderThickness="1" Padding="2" FontSize="11" TextAlignment="Center"/>
+                                    </StackPanel>
+                                    
+                                </UniformGrid>
+
+                                <WrapPanel HorizontalAlignment="Center">
+                                    <Button Content="TAKEOFF" Width="70" Height="28" Margin="3" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding TakeoffCommand}" Cursor="Hand"/>
+                                    <Button Content="LAND" Width="90" Height="32" Margin="5" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="land" Cursor="Hand"/>
+
+                                </WrapPanel>
+
+                            </StackPanel>
+                        </TabItem>
+
+                        <TabItem Header="DEADZONE">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+
+                                <UniformGrid Columns="3" Margin="0,0,0,8">
+                                    <StackPanel Margin="3">
+                                        <TextBlock Text="LAT" Foreground="#888" FontSize="9" HorizontalAlignment="Center"/>
+                                        <TextBox Text="{Binding DeadzoneLat, UpdateSourceTrigger=PropertyChanged}" Background="#0C0C0F" Foreground="#00E5FF" BorderBrush="#27272A" BorderThickness="1" Padding="2" FontSize="11" TextAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Margin="3">
+                                        <TextBlock Text="LONG" Foreground="#888" FontSize="9" HorizontalAlignment="Center"/>
+                                        <TextBox Text="{Binding DeadzoneLong, UpdateSourceTrigger=PropertyChanged}" Background="#0C0C0F" Foreground="#00E5FF" BorderBrush="#27272A" BorderThickness="1" Padding="2" FontSize="11" TextAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Margin="3">
+                                        <TextBlock Text="RAD(m)" Foreground="#888" FontSize="9" HorizontalAlignment="Center"/>
+                                        <TextBox Text="{Binding DeadzoneRadius, UpdateSourceTrigger=PropertyChanged}" Background="#0C0C0F" Foreground="#00E5FF" BorderBrush="#27272A" BorderThickness="1" Padding="2" FontSize="11" TextAlignment="Center"/>
+                                    </StackPanel>
+                                </UniformGrid>
+
+                                <WrapPanel HorizontalAlignment="Center">
+                                    <Button Content="SET" Width="70" Height="28" Margin="3" Background="#4A3A15" Foreground="#FFCC00" BorderBrush="#665511" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding SetDeadzoneCommand}" Cursor="Hand"/>
+                                    <Button Content="ON" Width="70" Height="28" Margin="3" Background="#154A15" Foreground="#55FF55" BorderBrush="#116611" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="deadzone on" Cursor="Hand"/>
+                                    <Button Content="OFF" Width="70" Height="28" Margin="3" Background="#4A1515" Foreground="#FF5555" BorderBrush="#661111" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="deadzone off" Cursor="Hand"/>
+                                    <Button Content="CLEAR" Width="70" Height="28" Margin="3" Background="#151A4A" Foreground="#5588FF" BorderBrush="#112266" BorderThickness="1" FontSize="11" FontWeight="Bold" Command="{Binding ChangeModeTCPCommand}" CommandParameter="deadzone clear" Cursor="Hand"/>
+                                </WrapPanel>
+
+                            </StackPanel>
                         </TabItem>
 
                         <TabItem Header="SELECT">
