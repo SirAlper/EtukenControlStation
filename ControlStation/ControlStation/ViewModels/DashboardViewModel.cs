@@ -58,10 +58,13 @@ namespace ControlStation.ViewModels
         private string _waypoints = "-35.36460,149.16520,40,-35.36280,149.16790,50,-35.36090,149.17020,60,-35.35950,149.16780,50," +
             "-35.35890,149.16460,40,-35.36080,149.16310,50,-35.36300,149.16280,60,-35.36500,149.16510,50";
 
+        private string _sonKayitYolu;
+
 
         public ObservableCollection<string> FlightLogs { get; } = new ObservableCollection<string>();
 
         public Action<IhaTelemetri> RequestMapUpdate { get; set; }
+        public Action<List<RakipIha>> RequestRakiplerUpdate { get; set; }
 
 
         public ObservableCollection<string> FlightModes { get; } = new ObservableCollection<string>
@@ -78,7 +81,7 @@ namespace ControlStation.ViewModels
             _rfService = rfService;
             _tcpService = tcpService;
 
-            
+
             TelemetryCards = new ObservableCollection<TelemetryCard>
             {
                 new TelemetryCard { Title = "İRTİFA", Value = "0.0", Unit = "m", ColorHex = "#00FF66" },
@@ -90,7 +93,7 @@ namespace ControlStation.ViewModels
                 new TelemetryCard { Title = "UÇUŞ MODU", Value = "BEKLİYOR", Unit = "", ColorHex = "#FF4444" }
             };
 
-            
+
             _rfService.DataRecieved += OnRfDataReceived;
 
             _libVLC = new LibVLC();
@@ -102,17 +105,17 @@ namespace ControlStation.ViewModels
 
         public void AddLog(string message)
         {
-            
+
             string time = DateTime.Now.ToString("HH:mm:ss");
             string formattedLog = $"[{time}] {message}";
 
-            
+
             System.Windows.Application.Current.Dispatcher.Invoke(() =>
             {
-               
+
                 FlightLogs.Insert(0, formattedLog);
 
-                
+
                 if (FlightLogs.Count > 50)
                 {
                     FlightLogs.RemoveAt(FlightLogs.Count - 1);
@@ -129,12 +132,12 @@ namespace ControlStation.ViewModels
                     ConnectionStatus = "Veri Akışı Aktif";
                     System.Diagnostics.Debug.WriteLine($"Dashboard Veri Yakaladı: {message}");
 
-                    
+
                     var data = JsonSerializer.Deserialize<IhaTelemetri>(message);
 
                     if (data != null)
                     {
-                      
+
                         TelemetryCards.First(c => c.Title == "İRTİFA").Value = data.IhaIrtifa.ToString("F1");
                         TelemetryCards.First(c => c.Title == "HIZ").Value = data.IhaHiz.ToString("F1");
                         TelemetryCards.First(c => c.Title == "BATARYA").Value = data.IhaBatarya.ToString();
@@ -142,7 +145,7 @@ namespace ControlStation.ViewModels
                         TelemetryCards.First(c => c.Title == "ROLL").Value = data.IhaYatis.ToString("F1");
                         TelemetryCards.First(c => c.Title == "YAW").Value = data.IhaYonelme.ToString("F1");
 
-                       
+
                         var modeCard = TelemetryCards.First(c => c.Title == "UÇUŞ MODU");
                         modeCard.Value = data.IhaOtonom == 1 ? "OTONOM" : "MANUEL";
                         modeCard.ColorHex = data.IhaOtonom == 1 ? "#00E5FF" : "#FF4444";
@@ -153,6 +156,12 @@ namespace ControlStation.ViewModels
 
                         RequestMapUpdate?.Invoke(data);
                     }
+
+                    if (data.Rakipler != null && data.Rakipler.Count > 0)
+                    {
+                        RequestRakiplerUpdate?.Invoke(data.Rakipler);
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -190,7 +199,7 @@ namespace ControlStation.ViewModels
         [RelayCommand]
         private void ChangeMode(string mode)
         {
-           
+
             _rfService.SendMessage(mode);
             System.Diagnostics.Debug.WriteLine($"Uçağa Mod Komutu Gönderildi: {mode}");
         }
@@ -199,7 +208,7 @@ namespace ControlStation.ViewModels
         private async Task ChangeModeTCP(string mode)
         {
 
-            
+
 
             await _tcpService.SendCommandAsync(mode);
             AddLog($"BAŞARILI: {mode.ToUpper()} uçağa ulaştı."); // LOG EKLEDİK
@@ -207,38 +216,68 @@ namespace ControlStation.ViewModels
         }
 
         [RelayCommand]
-        private void ToggleVideo()
+        private async Task ToggleVideo() // DİKKAT: async eklendi!
         {
             Debug.WriteLine("Buton calisti");
             if (IsVideoRunning)
             {
+                // 1. Oynatıcıyı ve Kaydı Durdur
                 VideoPlayer.Stop();
                 IsVideoRunning = false;
+                ConnectionStatus = "VİDEO VE KAYIT DURDURULDU.";
+
+                // 2. BÜYÜ BURADA: KAYDEDİLEN DOSYAYI OTOMATİK AÇ!
+                if (!string.IsNullOrEmpty(_sonKayitYolu) && System.IO.File.Exists(_sonKayitYolu))
+                {
+                    try
+                    {
+                        Debug.WriteLine($"🎬 Kayıt tamamlandı, VLC'nin dosyayı serbest bırakması bekleniyor...");
+
+                        // VLC'nin dosya kilidini (File Lock) kaldırması için 1 saniye bekle
+                        await Task.Delay(1000);
+
+                        Debug.WriteLine($"🎬 Video açılıyor: {_sonKayitYolu}");
+
+                        // UseShellExecute=true, dosyayı sanki sen çift tıklamışsın gibi Windows'ta varsayılan programla açar.
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                        {
+                            FileName = _sonKayitYolu,
+                            UseShellExecute = true
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"⚠️ Video otomatik açılamadı: {ex.Message}");
+                    }
+                }
             }
             else
             {
-                // İşlenmiş İHA videosunu UDP 5000 portundan sıfır gecikmeyle (low-latency) al!
-                var media = new Media(_libVLC, "udp://@0.0.0.0:8000", FromType.FromLocation);
+                // Yer istasyonu bilgisayarı 5000 portundan gelen tüm UDP paketlerini dinler
+                var media = new Media(_libVLC, "udp://@:5000", FromType.FromLocation);
 
                 // Gecikmeyi düşürmek için efsanevi VLC parametreleri:
-                media.AddOption(":network-caching=300");
+                media.AddOption(":network-caching=150");
                 media.AddOption(":clock-jitter=0");
                 media.AddOption(":clock-synchro=0");
-                media.AddOption(":avcodec-hw=any");
+                media.AddOption(":avcodec-hw=any"); // GPU hızlandırma
+                media.AddOption(":live-caching=0");
 
+                // Dosya ismini oluştur ve Sınıf Seviyesindeki değişkene ata
                 string dosyaAdi = $"IHA_Ucus_{DateTime.Now:yyyyMMdd_HHmmss}.ts";
-                string kayitYolu = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dosyaAdi);
+                _sonKayitYolu = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dosyaAdi);
+
+                // VLC bazı durumlarda Windows yollarındaki '\' işaretini sevmez, '/' yaparız:
+                string vlcIcinGoreceliYol = _sonKayitYolu.Replace("\\", "/");
 
                 // VLC'ye emri veriyoruz: Görüntüyü ÇOĞALT! Birini ekrana (display) ver, diğerini dosyaya (file) yaz!
-                // Not: C#'ta süslü parantezlerin karışmaması için {{ ve }} kullanıyoruz.
+                media.AddOption($":sout=#duplicate{{dst=display,dst=std{{access=file,mux=ts,dst='{vlcIcinGoreceliYol}'}}}}");
 
                 VideoPlayer.Play(media);
                 IsVideoRunning = true;
 
                 ConnectionStatus = $"CANLI YAYIN VE KAYIT BAŞLADI!\nDosya: {dosyaAdi}";
-                System.Diagnostics.Debug.WriteLine($"🎥 Video kaydediliyor: {kayitYolu}");
-
-
+                System.Diagnostics.Debug.WriteLine($"🎥 Video kaydediliyor: {_sonKayitYolu}");
             }
         }
     }

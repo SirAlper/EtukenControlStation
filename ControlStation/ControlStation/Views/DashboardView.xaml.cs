@@ -40,6 +40,14 @@ namespace ControlStation.Views
                             data.IhaHiz
                         );
                     };
+
+                    vm.RequestRakiplerUpdate = (rakiplerListesi) =>
+                    {
+                        foreach (var rakip in rakiplerListesi)
+                        {
+                            UpdateRakipPosition(rakip.Id, rakip.Enlem, rakip.Boylam, rakip.Yonelme, rakip.Irtifa, rakip.Hiz, rakip.Renk);
+                        }
+                    };
                 }
             };
         }
@@ -64,8 +72,21 @@ namespace ControlStation.Views
             }
         }
 
+        // Örnek: Rakip ID "T3_Yarismaci_5", Kırmızı Renk "#FF3333" olsun.
+        public async void UpdateRakipPosition(string id, double lat, double lng, double yaw, double alt, double speed, string colorHex)
+        {
+            if (MapWebView != null && MapWebView.CoreWebView2 != null)
+            {
+                string script = string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                    "updateRakip('{0}', {1}, {2}, {3}, {4}, {5}, '{6}')",
+                    id, lat, lng, yaw, alt, speed, colorHex);
+
+                await MapWebView.CoreWebView2.ExecuteScriptAsync(script);
+            }
+        }
+
         // ViewModel veya Telemetri Servisi üzerinden bu metodu çağırabilirsin
-        
+
     }
 }
 

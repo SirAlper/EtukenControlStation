@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControlStation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5af8c431210e7a856ffae6901ef6e01f7d2bf3b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+948c7d6033695e153f36c6ec80f5040fd5568c79")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControlStation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControlStation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

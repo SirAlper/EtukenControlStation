@@ -52,7 +52,24 @@ namespace ControlStation.Models
         [JsonPropertyName("hedef_yukseklik")]
         public int HedefYukseklik { get; set; }
 
+        [JsonPropertyName("rakipler")]
+        public List<RakipIha> Rakipler { get; set; }
+
+
         [JsonPropertyName("gps_saati")]
+
         public GpsSaati GpsSaati { get; set; }
     }
+
+    public class RakipIha
+    {
+        [JsonPropertyName("id")] public string Id { get; set; }
+        [JsonPropertyName("enlem")] public double Enlem { get; set; }
+        [JsonPropertyName("boylam")] public double Boylam { get; set; }
+        [JsonPropertyName("irtifa")] public double Irtifa { get; set; }
+        [JsonPropertyName("yonelme")] public double Yonelme { get; set; }
+        [JsonPropertyName("hiz")] public double Hiz { get; set; }
+        [JsonPropertyName("renk")] public string Renk { get; set; }
+    }
+
 }
