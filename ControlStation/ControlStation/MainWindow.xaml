@@ -61,8 +61,7 @@
                 <RadioButton Content="Bağlantı Ayarları" Style="{StaticResource ModernNavButton}" 
                              Command="{Binding NavigateCommand}" CommandParameter="Settings"/>
 
-                <RadioButton Content="Görev Planlama" Style="{StaticResource ModernNavButton}" 
-                             Command="{Binding NavigateCommand}" CommandParameter="Mission" IsEnabled="False"/>
+                
             </StackPanel>
         </Border>
         <Border Grid.Column="1" Background="#121215" BorderBrush="#1F1F24" BorderThickness="0,0,1,0">

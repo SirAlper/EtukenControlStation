@@ -137,7 +137,7 @@ namespace ControlStation.ViewModels
 
                     if (data != null)
                     {
-
+                        
                         TelemetryCards.First(c => c.Title == "İRTİFA").Value = data.IhaIrtifa.ToString("F1");
                         TelemetryCards.First(c => c.Title == "HIZ").Value = data.IhaHiz.ToString("F1");
                         TelemetryCards.First(c => c.Title == "BATARYA").Value = data.IhaBatarya.ToString();

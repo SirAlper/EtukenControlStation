@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\services\\rfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\services\\rfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\services\\connectionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\services\\connectionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\resources\\viewtemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\resources\\viewtemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\views\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +47,12 @@
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\models\\ihatelemetri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\services\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\models\\gpssaati.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\models\\gpssaati.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\services\\rfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\services\\rfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\controlstation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -63,20 +75,8 @@
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\views\\settingsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\resources\\viewtemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\resources\\viewtemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|solutionrelative:controlstation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F24CAE9D-F394-7D90-9236-1EFA47DF8EAD}|ControlStation\\ControlStation.csproj|c:\\users\\hanal\\onedrive\\belgeler\\etukencontrolstation\\controlstation\\controlstation\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,100 +98,73 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ViewModels\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "ControlStation\\ViewModels\\DashboardViewModel.cs",
               "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ViewModels\\DashboardViewModel.cs",
               "RelativeToolTip": "ControlStation\\ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAAwwAMBAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAqwH8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T13:58:13.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "map.html",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\map.html",
-              "RelativeDocumentMoniker": "ControlStation\\map.html",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\map.html",
-              "RelativeToolTip": "ControlStation\\map.html",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAowLkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-19T08:43:13.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IhaTelemetri.cs",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\IhaTelemetri.cs",
-              "RelativeDocumentMoniker": "ControlStation\\Models\\IhaTelemetri.cs",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\IhaTelemetri.cs",
-              "RelativeToolTip": "ControlStation\\Models\\IhaTelemetri.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAA2wDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T22:26:10.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "HttpService.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\HttpService.cs",
               "RelativeDocumentMoniker": "ControlStation\\Services\\HttpService.cs",
               "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\HttpService.cs",
               "RelativeToolTip": "ControlStation\\Services\\HttpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAADEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T15:56:52.199Z"
+              "WhenOpened": "2026-04-18T15:56:52.199Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\DashboardView.xaml.cs",
-              "RelativeDocumentMoniker": "ControlStation\\Views\\DashboardView.xaml.cs",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\DashboardView.xaml.cs",
-              "RelativeToolTip": "ControlStation\\Views\\DashboardView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T10:31:09.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ControlStation\\ViewModels\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "ControlStation\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T13:58:33.404Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ConnectionsService.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\ConnectionsService.cs",
               "RelativeDocumentMoniker": "ControlStation\\Services\\ConnectionsService.cs",
               "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\ConnectionsService.cs",
               "RelativeToolTip": "ControlStation\\Services\\ConnectionsService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwD0AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwCsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T11:23:58.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "RfService.cs",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\RfService.cs",
+              "RelativeDocumentMoniker": "ControlStation\\Services\\RfService.cs",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\RfService.cs",
+              "RelativeToolTip": "ControlStation\\Services\\RfService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T00:00:25.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "GpsSaati.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\GpsSaati.cs",
               "RelativeDocumentMoniker": "ControlStation\\Models\\GpsSaati.cs",
@@ -203,7 +176,77 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewTemplates.xaml",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Resources\\ViewTemplates.xaml",
+              "RelativeDocumentMoniker": "ControlStation\\Resources\\ViewTemplates.xaml",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Resources\\ViewTemplates.xaml",
+              "RelativeToolTip": "ControlStation\\Resources\\ViewTemplates.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T14:00:42.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ControlStation\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\App.xaml.cs",
+              "RelativeToolTip": "ControlStation\\App.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwCsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T14:02:30.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ControlStation\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\MainWindow.xaml",
+              "RelativeToolTip": "ControlStation\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-27T16:04:15.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "map.html",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\map.html",
+              "RelativeDocumentMoniker": "ControlStation\\map.html",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\map.html",
+              "RelativeToolTip": "ControlStation\\map.html",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowLkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-19T08:43:13.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IhaTelemetri.cs",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\IhaTelemetri.cs",
+              "RelativeDocumentMoniker": "ControlStation\\Models\\IhaTelemetri.cs",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\IhaTelemetri.cs",
+              "RelativeToolTip": "ControlStation\\Models\\IhaTelemetri.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAA2wDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T22:26:10.502Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "DashboardView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\DashboardView.xaml.cs",
+              "RelativeDocumentMoniker": "ControlStation\\Views\\DashboardView.xaml.cs",
+              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\DashboardView.xaml.cs",
+              "RelativeToolTip": "ControlStation\\Views\\DashboardView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T10:31:09.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "DashboardView.xaml",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\DashboardView.xaml",
               "RelativeDocumentMoniker": "ControlStation\\Views\\DashboardView.xaml",
@@ -214,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "SettingsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ViewModels\\SettingsViewModel.cs",
               "RelativeDocumentMoniker": "ControlStation\\ViewModels\\SettingsViewModel.cs",
@@ -226,19 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RfService.cs",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\RfService.cs",
-              "RelativeDocumentMoniker": "ControlStation\\Services\\RfService.cs",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Services\\RfService.cs",
-              "RelativeToolTip": "ControlStation\\Services\\RfService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T00:00:25.973Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ControlStation.csproj",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
               "RelativeDocumentMoniker": "ControlStation\\ControlStation.csproj",
@@ -250,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "SettingsView.xaml",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\SettingsView.xaml",
               "RelativeDocumentMoniker": "ControlStation\\Views\\SettingsView.xaml",
@@ -261,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "TelemetryCards.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Models\\TelemetryCards.cs",
               "RelativeDocumentMoniker": "ControlStation\\Models\\TelemetryCards.cs",
@@ -273,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "SettingsView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Views\\SettingsView.xaml.cs",
               "RelativeDocumentMoniker": "ControlStation\\Views\\SettingsView.xaml.cs",
@@ -297,19 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\App.xaml.cs",
-              "RelativeDocumentMoniker": "ControlStation\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\App.xaml.cs",
-              "RelativeToolTip": "ControlStation\\App.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwC8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T14:02:30.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\App.xaml",
               "RelativeDocumentMoniker": "ControlStation\\App.xaml",
@@ -317,28 +336,6 @@
               "RelativeToolTip": "ControlStation\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-02-12T14:01:39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ViewTemplates.xaml",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Resources\\ViewTemplates.xaml",
-              "RelativeDocumentMoniker": "ControlStation\\Resources\\ViewTemplates.xaml",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\Resources\\ViewTemplates.xaml",
-              "RelativeToolTip": "ControlStation\\Resources\\ViewTemplates.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-12T14:00:42.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ControlStation\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\MainWindow.xaml",
-              "RelativeToolTip": "ControlStation\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-27T16:04:15.139Z"
             },
             {
               "$type": "Document",
