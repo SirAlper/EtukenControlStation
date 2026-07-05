@@ -13,15 +13,15 @@ namespace ControlStation.Services
         private TcpClient _client;
         private NetworkStream _stream;
 
-        // DI Container burayı kullanacak
+       
         public ConnectionsService()
         {
         }
 
-        // Arayüzden IP ve Port gelecek, biz de bağlanacağız
+       
         public async Task ConnectAsync(string ipAddress, int port)
         {
-            // Eski bağlantı varsa temizle
+            
             if (_client != null && _client.Connected)
             {
                 _client.Close();
@@ -30,20 +30,20 @@ namespace ControlStation.Services
             _client = new TcpClient();
             var ipEndPoint = new IPEndPoint(IPAddress.Parse(ipAddress), port);
 
-            // Senin asenkron bağlanma kodun
+           
             await _client.ConnectAsync(ipEndPoint);
             _stream = _client.GetStream();
         }
 
         public async Task<bool> SendCommandAsync(string message)
         {
-            // Bağlantı yoksa veya koptuysa boşa işlem yapma
+            
             if (_client == null || !_client.Connected || _stream == null)
                 return false;
 
             try
             {
-                // Göndereceğimiz metni Byte dizisine çeviriyoruz
+                
                 byte[] data = Encoding.UTF8.GetBytes(message);
 
                 // Veriyi ağa yaz

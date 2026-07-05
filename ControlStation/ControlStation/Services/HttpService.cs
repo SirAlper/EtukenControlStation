@@ -47,9 +47,7 @@ namespace ControlStation.Services
                 jsonContent);
         }
         
-        using HttpResponseMessage
-
-        var jsonResponse = await response
+       
     }
 
     class Login(string kadi, string sifre)

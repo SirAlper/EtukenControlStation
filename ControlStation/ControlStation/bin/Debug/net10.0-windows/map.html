@@ -5,7 +5,7 @@
     <title>İHA Taktik Ekranı</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        /* Tam ekran harita, koyu arka plan */
+       
         body, html, #map {
             height: 100%;
             margin: 0;
@@ -13,13 +13,13 @@
             overflow: hidden;
         }
 
-        /* ANA Uçağın modern neon stili */
+        
         .uav-icon {
             filter: drop-shadow(0 0 7px #00e5ff);
             transition: all 0.2s linear;
         }
 
-        /* Modern Karanlık Tema Popup/Tooltip */
+      
         .leaflet-tooltip {
             background: rgba(11, 14, 20, 0.9) !important;
             color: #ffffff !important;
@@ -36,9 +36,7 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // ==========================================
-        // 1. HARİTA VE ANA İHA KURULUMU
-        // ==========================================
+        
         var map = L.map('map', { zoomControl: false }).setView([41.5087, 36.1183], 16);
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -53,7 +51,7 @@
             dashArray: '5, 10'
         }).addTo(map);
 
-        // Ana Uçak İkonu ve İşaretçisi
+        
         var uavSvg = `
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z" fill="#00e5ff" stroke="#0b0e14" stroke-width="1.5" stroke-linejoin="round"/>
@@ -69,15 +67,9 @@
         var uavMarker = L.marker([41.5087, 36.1183], { icon: uavIcon }).addTo(map);
         uavMarker.bindTooltip("BİZİM İHA", { permanent: false, direction: "top", offset: [0, -10] });
 
-        // ==========================================
-        // 2. RAKİP İHA'LARI TUTACAĞIMIZ SÖZLÜK (HAFIZA)
-        // ==========================================
+       
         var rakipIhalar = {};
-        /* Örnek Yapı:
-           rakipIhalar["Rakip1"] = { marker: obj, path: obj };
-        */
-
-        // Rakip Uçaklar için dinamik renkli SVG üreten fonksiyon
+       
         function getRakipIcon(renkKodu) {
             var svg = `
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,19 +77,15 @@
                     </svg>`;
 
             return L.divIcon({
-                // Drop-shadow (Neon parlama) efektini de o renge boyuyoruz
+               
                 html: `<div style="filter: drop-shadow(0 0 7px ${renkKodu}); transition: all 0.2s linear; width:100%; height:100%;">${svg}</div>`,
-                className: '', // Boş bırakıyoruz ki CSS çakışmasın
+                className: '', 
                 iconSize: [30, 30],
                 iconAnchor: [15, 15]
             });
         }
 
-        // ============================================================
-        // C# TARAFINDAN ÇAĞRILACAK FONKSİYONLAR
-        // ============================================================
-
-        // ANA UÇAĞI OYNATAN FONKSİYON
+        
         function updateUAV(lat, lng, yaw, alt, speed) {
             var newPos = [lat, lng];
 
@@ -123,15 +111,13 @@
         }
 
 
-        // YENİ: RAKİP UÇAĞI OYNATAN FONKSİYON
-        // C#'tan rakibin ID'sini (örneğin "Takim_42") ve Rengini ("#ff0055") göndereceksin
+       
         function updateRakip(id, lat, lng, yaw, alt, speed, renk) {
             var newPos = [lat, lng];
 
-            // Eğer bu ID'ye sahip rakip haritada yoksa, İLK KEZ OLUŞTUR
+          
             if (!rakipIhalar[id]) {
 
-                // Rakibe özel Rota Çizgisi oluştur
                 var rPath = L.polyline([], {
                     color: renk,
                     weight: 2,
@@ -139,30 +125,27 @@
                     dashArray: '5, 10'
                 }).addTo(map);
 
-                // Rakibe özel İkon ve Marker oluştur
+             
                 var rIcon = getRakipIcon(renk);
                 var rMarker = L.marker(newPos, { icon: rIcon }).addTo(map);
 
-                // ==========================================
-                // BÜYÜ BURADA: RAKİBE TOOLTIP (BİLGİ ETİKETİ) BAĞLA
-                // permanent: false -> Sadece Mouse ile üstüne gelince gösterir
-                // ==========================================
+                
                 rMarker.bindTooltip("", { permanent: false, direction: "top", offset: [0, -10] });
 
-                // Rakibi Hafızaya (Sözlüğe) Kaydet
+                
                 rakipIhalar[id] = { marker: rMarker, path: rPath };
             }
 
-            // Rakibi hafızadan çağır ve GÜNCELLE
+          
             var rakip = rakipIhalar[id];
 
-            // Konumu güncelle
+           
             rakip.marker.setLatLng(newPos);
 
-            // Bilgi Kutusunun içeriğini HTML formatında şıkça güncelle
+           
             rakip.marker.setTooltipContent(`<div style="text-align:center;"><b>${id}</b><br>ALT: ${alt.toFixed(1)}m | HIZ: ${speed.toFixed(1)}m/s</div>`);
 
-            // Açıyı döndür
+           
             var iconElement = rakip.marker.getElement();
             if (iconElement) {
                 var innerDiv = iconElement.querySelector('div');
@@ -172,10 +155,10 @@
                 }
             }
 
-            // Rakibin kendi rota çizgisine yeni nokta ekle
+            
             rakip.path.addLatLng(newPos);
 
-            // Rakibin duman izini 15 saniye sonra kendi polyline'ından sil
+            
             setTimeout(() => {
                 var currentLatLngs = rakip.path.getLatLngs();
                 if (currentLatLngs.length > 0) {

@@ -28,8 +28,7 @@ namespace ControlStation.Views
             {
                 if (DataContext is DashboardViewModel vm)
                 {
-                    // ViewModel'deki elçiye görevini veriyoruz: 
-                    // "ViewModel haber verince, haritadaki UpdateMapPosition fonksiyonunu çalıştır"
+                    
                     vm.RequestMapUpdate = (data) =>
                     {
                         UpdateMapPosition(
@@ -53,10 +52,10 @@ namespace ControlStation.Views
         }
         private async void InitializeMapAsync()
         {
-            // WebView2 Motorunu Başlat
+            
             await MapWebView.EnsureCoreWebView2Async(null);
 
-            // Çıktı dizinindeki map.html dosyasının tam yolunu bul ve yükle
+          
             string htmlPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.html"); MapWebView.CoreWebView2.Navigate(htmlPath);
         }
 
@@ -64,7 +63,7 @@ namespace ControlStation.Views
         {
             if (MapWebView != null && MapWebView.CoreWebView2 != null)
             {
-                // Sayıları JS'in anlayacağı formatta (noktalı) yollamak için InvariantCulture kullanıyoruz!
+                
                 string script = string.Format(System.Globalization.CultureInfo.InvariantCulture,
                     "updateUAV({0}, {1}, {2}, {3}, {4})", lat, lng, yaw, alt, speed);
 
@@ -72,7 +71,7 @@ namespace ControlStation.Views
             }
         }
 
-        // Örnek: Rakip ID "T3_Yarismaci_5", Kırmızı Renk "#FF3333" olsun.
+        
         public async void UpdateRakipPosition(string id, double lat, double lng, double yaw, double alt, double speed, string colorHex)
         {
             if (MapWebView != null && MapWebView.CoreWebView2 != null)
@@ -85,7 +84,7 @@ namespace ControlStation.Views
             }
         }
 
-        // ViewModel veya Telemetri Servisi üzerinden bu metodu çağırabilirsin
+        
 
     }
 }
