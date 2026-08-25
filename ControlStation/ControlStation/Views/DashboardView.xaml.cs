@@ -52,11 +52,25 @@ namespace ControlStation.Views
         }
         private async void InitializeMapAsync()
         {
-            
-            await MapWebView.EnsureCoreWebView2Async(null);
+            try
+            {
+               
+                string userDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SavasanIhaGCS_Cache");
 
-          
-            string htmlPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.html"); MapWebView.CoreWebView2.Navigate(htmlPath);
+                
+                var env = await Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(null, userDataFolder);
+
+                
+                await MapWebView.EnsureCoreWebView2Async(env);
+
+              
+                string htmlPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.html");
+                MapWebView.CoreWebView2.Navigate(htmlPath);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show($"Harita başlatılamadı: {ex.Message}");
+            }
         }
 
         public async void UpdateMapPosition(double lat, double lng, double yaw, double alt, double speed)

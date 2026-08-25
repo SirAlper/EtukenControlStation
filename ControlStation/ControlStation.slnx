@@ -5,9 +5,9 @@
     <Platform Name="x86" />
   </Configurations>
   <Folder Name="/Çözüm Öğeleri/" />
-  <Project Path="../../../Masaüstü/HUD-master/HUD/HUD.csproj" Id="d3d64d9a-3bee-4407-bf66-e3485bd30a30" />
   <Project Path="ControlStation/ControlStation.csproj">
     <Platform Solution="*|x64" Project="x64" />
     <Platform Solution="*|x86" Project="x86" />
   </Project>
+  <Project Path="HUD/HUD.csproj" Id="d3d64d9a-3bee-4407-bf66-e3485bd30a30" />
 </Solution>

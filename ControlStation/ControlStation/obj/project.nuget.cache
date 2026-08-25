@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "PhDwl2c37KI=",
+  "dgSpecHash": "2fl9xU8wKPQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
+  "projectFilePath": "C:\\Users\\hanal\\Documents\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hanal\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\libvlcsharp\\3.9.6\\libvlcsharp.3.9.6.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\libvlcsharp.wpf\\3.9.6\\libvlcsharp.wpf.3.9.6.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.aspnetcore.components.webview.wpf\\10.0.100\\microsoft.aspnetcore.components.webview.wpf.10.0.100.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.2\\microsoft.extensions.dependencyinjection.10.0.2.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.web.webview2\\1.0.3912.50\\microsoft.web.webview2.1.0.3912.50.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.web.webview2\\1.0.4129.50\\microsoft.web.webview2.1.0.4129.50.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\microsoft.win32.systemevents\\10.0.3\\microsoft.win32.systemevents.10.0.3.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4\\4.13.0.20260308\\opencvsharp4.4.13.0.20260308.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.runtime.win\\4.13.0.20260302\\opencvsharp4.runtime.win.4.13.0.20260302.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\opencvsharp4.wpfextensions\\4.13.0.20260308\\opencvsharp4.wpfextensions.4.13.0.20260308.nupkg.sha512",
@@ -32,22 +34,17 @@
     "C:\\Users\\hanal\\.nuget\\packages\\runtime.native.system.io.ports\\10.0.3\\runtime.native.system.io.ports.10.0.3.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\10.0.3\\runtime.osx-arm64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\10.0.3\\runtime.osx-x64.runtime.native.system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.drawing.common\\10.0.3\\system.drawing.common.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\system.io.ports\\10.0.3\\system.io.ports.10.0.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\hanal\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\hanal\\.nuget\\packages\\videolan.libvlc.windows\\3.0.23\\videolan.libvlc.windows.3.0.23.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "message": "PackageReference System.Net.Sockets ayıklanmayacak. Bu paketi bağımlılıklarınızdan kaldırmayı düşünün, çünkü muhtemelen gereksizdir.",
-      "projectPath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\hanal\\OneDrive\\Belgeler\\EtukenControlStation\\ControlStation\\ControlStation\\ControlStation.csproj",
-      "libraryId": "System.Net.Sockets",
-      "targetGraphs": [
-        "net10.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }
